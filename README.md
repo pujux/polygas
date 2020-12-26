@@ -4,8 +4,9 @@
 
 - `git clone https://github.com/lauridskern/next-typescript-tailwind.git your-app-name`
 - `cd your-app-name`
+- `git remote rm origin`
+- `yarn init`
 - `yarn`
-- `yarn dev`
 
 ### Features
 
