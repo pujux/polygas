@@ -1,11 +1,13 @@
 import Head from "next/head";
 import { LayoutProps } from "../@types";
 
-function Layout({ children }: LayoutProps) {
+function Layout({ title, children }: LayoutProps) {
   return (
     <div className="container mx-auto min-h-screen flex flex-col">
       <Head>
-        <title>Title</title>
+        <title>
+          {title} {title ? " | " : ""} SiteName
+        </title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="title" content="title text" />
         <meta name="description" content="description text" />
