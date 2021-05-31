@@ -1,14 +1,14 @@
-## Minimal Next.js starter with typescript & tailwind
+# Minimal Next.js starter with typescript & tailwind (using npm)
 
-### Usage
+## Usage
 
-- `git clone https://github.com/lauridskern/next-typescript-tailwind.git your-app-name`
+- `git clone https://github.com/puf17640/next-typescript-tailwind.git your-app-name`
 - `cd your-app-name`
 - `git remote rm origin`
-- `yarn init`
-- `yarn`
+- `npm init`
+- `npm run dev`
 
-### Features
+## Features
 
 - tailwindcss 2.0
 - typescript

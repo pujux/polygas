@@ -15,7 +15,7 @@ function Layout({ title, children }: LayoutProps) {
       <header className="flex justify-center mt-4">Header</header>
       <main className="flex flex-1 flex-col">{children}</main>
       <footer className="flex justify-center mb-4">
-        © {new Date().getFullYear()} Laurids Kern
+        © {new Date().getFullYear()} Julian Pufler
       </footer>
     </div>
   );
