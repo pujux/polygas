@@ -1,4 +1,4 @@
-# Minimal Next.js starter with typescript & tailwind (using npm)
+# Minimal Next.js starter with typescript & tailwind
 
 ## Usage
 
@@ -10,6 +10,7 @@
 
 ## Features
 
+- uses npm
 - tailwindcss 2.0
 - typescript
 - basic layout components with header, body, footer
