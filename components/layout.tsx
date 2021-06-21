@@ -43,7 +43,7 @@ function Layout({ title, children }: LayoutProps) {
             </h2>
           </div>
           <div className="flex items-center">
-            <HeartIcon className="fill-current text-primaryTextLight dark:text-primaryTextDark cursor-pointer" onClick={() => null} />
+            <HeartIcon className="fill-current text-primaryTextLight dark:text-primaryTextDark cursor-pointer" onClick={() => window.open("https://discord.gg/VEa8xXw6CK")} />
             <div className="w-5"></div>
             {isDarkmode ? (
               <SunIcon className="fill-current text-primaryTextDark cursor-pointer" onClick={() => toggleDarkmode(!isDarkmode)} />
