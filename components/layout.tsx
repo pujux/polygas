@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { LayoutProps } from "../@types";
 import MoonIcon from "../public/moon.svg";
 import SunIcon from "../public/sun.svg";
-import HeartIcon from "../public/discord.svg";
+import DiscordIcon from "../public/discord.svg";
 
 function Layout({ title, children }: LayoutProps) {
   const [isDarkmode, setIsDarkmode] = useState(false);
@@ -43,7 +43,7 @@ function Layout({ title, children }: LayoutProps) {
             </h2>
           </div>
           <div className="flex items-center">
-            <HeartIcon className="cursor-pointer fill-current text-primaryTextLight dark:text-primaryTextDark" onClick={() => window.open("https://discord.gg/VEa8xXw6CK")} />
+            <DiscordIcon className="transition-none fill-current ctursor-pointer text-primaryTextLight dark:text-primaryTextDark" onClick={() => window.open("https://discord.gg/VEa8xXw6CK")} />
             <div className="w-5"></div>
             {isDarkmode ? (
               <SunIcon className="cursor-pointer fill-current text-primaryTextDark" onClick={() => toggleDarkmode(!isDarkmode)} />
