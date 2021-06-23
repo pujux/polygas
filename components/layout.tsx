@@ -32,36 +32,36 @@ function Layout({ title, children }: LayoutProps) {
         <meta name="title" content="title text" />
         <meta name="description" content="description text" />
       </Head>
-      <header className="py-4 px-4 md:px-8 mb-6 bg-secondaryBackgroundLight dark:bg-secondaryBackgroundDark shadow-md">
-        <div className="md:container mx-auto flex justify-between">
+      <header className="px-4 py-4 mb-6 shadow-md md:px-8 bg-secondaryBackgroundLight dark:bg-secondaryBackgroundDark">
+        <div className="flex justify-between mx-auto md:container">
           <div className="flex items-center">
-            <h1 className="font-bold text-3xl text-accentText">
+            <h1 className="text-3xl font-bold text-accentText">
               PolyGas
             </h1>
-            <h2 className="font-bold text-sm md:text-xl mx-4 mt-1 text-secondaryTextLight dark:text-secondaryTextDark">
+            <h2 className="mx-4 mt-1 text-sm font-bold md:text-xl text-secondaryTextLight dark:text-secondaryTextDark">
               Polygon Gas Price forecast system
             </h2>
           </div>
           <div className="flex items-center">
-            <HeartIcon className="fill-current text-primaryTextLight dark:text-primaryTextDark cursor-pointer" onClick={() => window.open("https://discord.gg/VEa8xXw6CK")} />
+            <HeartIcon className="cursor-pointer fill-current text-primaryTextLight dark:text-primaryTextDark" onClick={() => window.open("https://discord.gg/VEa8xXw6CK")} />
             <div className="w-5"></div>
             {isDarkmode ? (
-              <SunIcon className="fill-current text-primaryTextDark cursor-pointer" onClick={() => toggleDarkmode(!isDarkmode)} />
+              <SunIcon className="cursor-pointer fill-current text-primaryTextDark" onClick={() => toggleDarkmode(!isDarkmode)} />
             ) : (
-              <MoonIcon className="fill-current text-primaryTextLight cursor-pointer" onClick={() => toggleDarkmode(!isDarkmode)} />
+              <MoonIcon className="cursor-pointer fill-current text-primaryTextLight" onClick={() => toggleDarkmode(!isDarkmode)} />
             )}
           </div>
         </div>
       </header>
-      <div className="container mx-auto min-h-screen flex flex-col overflow-hidden">
-        <main className="flex flex-1 flex-col">{children}</main>
+      <div className="container flex flex-col min-h-screen mx-auto overflow-hidden">
+        <main className="flex flex-col flex-1">{children}</main>
       </div>
-      <footer className="flex flex-col align-middle justify-center text-center pb-8 px-16 text-primaryTextLight dark:text-primaryTextDark">
+      <footer className="flex flex-col justify-center px-16 pb-8 text-center align-middle text-primaryTextLight dark:text-primaryTextDark">
         <br />
-        <p>This was built by <a className="text-accentText underline" href="https://pufler.dev">Julian Pufler</a></p>
-        <p>and sponsored by <a className="text-accentText underline" href="https://gravityfinance.io">Gravity Finance</a></p>
+        <p>This was built by <a className="underline text-accentText" href="https://pufler.dev">Julian Pufler</a></p>
+        <p>and sponsored by <a className="underline text-accentText" href="https://gravityfinance.io">Gravity Finance</a></p>
         <br />
-        <p>Check out <a className="text-accentText underline" href="https://polyfee.wtf">PolyFee.wtf</a></p>
+        <p>Check out <a className="underline text-accentText" href="https://polyfee.wtf">PolyFee.wtf</a></p>
         <p>© {new Date().getFullYear()} Julian Pufler</p>
       </footer>
     </div>
