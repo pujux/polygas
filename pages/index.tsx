@@ -3,10 +3,10 @@ import { setInterval, setTimeout } from "timers";
 import Layout from "../components/layout";
 import { Line } from "react-chartjs-2";
 
-let blocks = [];
-let gasInterval, priceInterval;
-
 const Home = () => {
+  let gasInterval,
+    priceInterval,
+    blocks = [];
   const [gasData, setGasData] = useState({
     safeLow: NaN,
     standard: NaN,
@@ -65,6 +65,8 @@ const Home = () => {
           isNaN(gasData.fastest) ||
           isNaN(gasData.fast)
             ? undefined
+            : gasData.fastest.toFixed(0) === gasData.fast.toFixed(0)
+            ? `${gasData.fast.toFixed(0)} Gwei`
             : `${gasData.fastest.toFixed(0)}-${gasData.fast.toFixed(0)} Gwei`
         }
       >
@@ -148,7 +150,9 @@ const Home = () => {
             <Line
               type="line"
               data={{
-                labels: lastBlocks.map(({ receivedAt }) => receivedAt),
+                labels: lastBlocks.map(({ receivedAt }) =>
+                  receivedAt.toLocaleTimeString()
+                ),
                 datasets: [
                   {
                     label: "Rapid",
@@ -168,6 +172,17 @@ const Home = () => {
                     pointRadius: 1,
                     cubicInterpolationMode: "monotone",
                   },
+                  {
+                    label: "Standard",
+                    data: lastBlocks.map(({ standard }) =>
+                      standard?.toFixed(0)
+                    ),
+                    fill: false,
+                    backgroundColor: "#2563eb",
+                    borderColor: "#2563eb",
+                    pointRadius: 1,
+                    cubicInterpolationMode: "monotone",
+                  },
                 ],
               }}
               options={{
@@ -181,13 +196,6 @@ const Home = () => {
                   {
                     scaleLabel: {
                       labelString: "Gwei",
-                    },
-                  },
-                ],
-                xAxes: [
-                  {
-                    scaleLabel: {
-                      labelString: "Block #",
                     },
                   },
                 ],
