@@ -41,8 +41,7 @@ const Home = () => {
       .then((res) => res.json())
       .catch((err) => console.error("(╯°□°)╯︵ ┻━┻", err));
     if (data && !blocks.find((b) => b.blockNumber === data.blockNumber)) {
-      blocks = [...blocks.slice(-24), data];
-      console.log(blocks);
+      blocks = [...blocks.slice(-24), { ...data, receivedAt: new Date() }];
       setLastBlocks(blocks);
       setGasData(data);
     }
@@ -79,7 +78,7 @@ const Home = () => {
                 Recommended Gas Price after analyzing the last 500 Transactions
               </h2>
             </div>
-            <div className="mb-4 grid grid-cols-1 gap-6 md:gap-12 md:grid-cols-4">
+            <div className="grid grid-cols-1 gap-6 mb-4 md:gap-12 md:grid-cols-4">
               <div className="flex items-center justify-between p-4 overflow-hidden border border-solid md:flex-col rounded-xl border-tertiaryBackgroundLight dark:border-tertiaryBackgroundDark bg-secondaryTextDark dark:bg-secondaryTextLight">
                 <h2 className="w-10 text-lg font-bold md:text-xl md:w-auto text-primaryTextLight dark:text-primaryTextDark">
                   Rapid
@@ -142,16 +141,18 @@ const Home = () => {
           </div>
         </div>
         <div className="mx-4 mb-8 md:mx-0">
-          <h1 className="mb-4 text-3xl md:text-center text-primaryTextLight dark:text-primaryTextDark">Last 25 Blocks received</h1>
+          <h1 className="mb-4 text-3xl md:text-center text-primaryTextLight dark:text-primaryTextDark">
+            Last 25 Blocks received
+          </h1>
           <div className="max-w-4xl mx-auto">
             <Line
               type="line"
               data={{
-                labels: lastBlocks.map((b) => b.blockNumber),
+                labels: lastBlocks.map(({ receivedAt }) => receivedAt),
                 datasets: [
                   {
                     label: "Rapid",
-                    data: lastBlocks.map((b) => b.fastest?.toFixed(0)),
+                    data: lastBlocks.map(({ fastest }) => fastest?.toFixed(0)),
                     fill: false,
                     backgroundColor: "#10b981",
                     borderColor: "#10b981",
@@ -160,7 +161,7 @@ const Home = () => {
                   },
                   {
                     label: "Fast",
-                    data: lastBlocks.map((b) => b.fast?.toFixed(0)),
+                    data: lastBlocks.map(({ fast }) => fast?.toFixed(0)),
                     fill: false,
                     backgroundColor: "#ffa600",
                     borderColor: "#ffa600",
