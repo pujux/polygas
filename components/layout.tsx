@@ -35,9 +35,12 @@ function Layout({ title, children }: LayoutProps) {
       <header className="px-4 py-4 mb-6 shadow-md md:px-16 bg-secondaryBackgroundLight dark:bg-secondaryBackgroundDark">
         <div className="flex justify-between mx-auto md:container">
           <div className="flex items-center">
-            <h1 className="text-3xl font-bold text-accentText">PolyGas</h1>
-            <h2 className="mx-4 mt-1 text-sm font-bold md:text-xl text-secondaryTextLight dark:text-secondaryTextDark">
-              Polygon Gas Price forecast system
+            <img className="w-8" alt="logo" src="/logo.png"></img>
+            <h1 className="ml-2 text-2xl font-bold md:text-3xl text-accentText">
+              PolyGas
+            </h1>
+            <h2 className="mt-1 ml-4 text-sm font-bold md:text-xl text-secondaryTextLight dark:text-secondaryTextDark">
+              Polygon Gas Price Forecast
             </h2>
           </div>
           <div className="flex items-center">
