@@ -30,25 +30,51 @@ function Layout({ title, children }: LayoutProps) {
     <div>
       <Head>
         <title>
-          {title} {title ? " | " : ""} PolyGas
+          {title} {title ? " | " : ""} PolyGas - Gas Price Estimator
         </title>
         <link rel="icon" href="/favicon.ico" />
-        <title>PolyGas - Gas Price Estimator</title>
-        <meta name="description" content="Polygon gas price forecast based on the last 500 transactions"></meta>
+        <meta
+          name="description"
+          content="Polygon gas price forecast based on the last 500 transactions"
+        ></meta>
         <meta name="image" content="https://polygas.org/meta-image.png"></meta>
         <meta name="twitter:card" content="summary"></meta>
-        <meta name="twitter:title" content="PolyGas - Gas Price Estimator"></meta>
-        <meta name="twitter:description" content="Polygon gas price forecast based on the last 500 transactions"></meta>
-        <meta name="twitter:image:src" content="https://polygas.org/meta-image.png"></meta>
+        <meta
+          name="twitter:title"
+          content="PolyGas - Gas Price Estimator"
+        ></meta>
+        <meta
+          name="twitter:description"
+          content="Polygon gas price forecast based on the last 500 transactions"
+        ></meta>
+        <meta
+          name="twitter:image:src"
+          content="https://polygas.org/meta-image.png"
+        ></meta>
         <meta name="og:title" content="PolyGas - Gas Price Estimator"></meta>
-        <meta name="og:description" content="Polygon gas price forecast based on the last 500 transactions"></meta>
-        <meta name="og:image" content="https://polygas.org/meta-image.png"></meta>
+        <meta
+          name="og:description"
+          content="Polygon gas price forecast based on the last 500 transactions"
+        ></meta>
+        <meta
+          name="og:image"
+          content="https://polygas.org/meta-image.png"
+        ></meta>
         <meta name="og:url" content="https://polygas.org"></meta>
-        <meta name="og:site_name" content="PolyGas - Gas Price Estimator"></meta>
+        <meta
+          name="og:site_name"
+          content="PolyGas - Gas Price Estimator"
+        ></meta>
         <meta name="og:type" content="website"></meta>
-        <meta name="keywords" content="gas,gasprice,polygon,polygas,price"></meta>
+        <meta
+          name="keywords"
+          content="gas,gasprice,polygon,polygas,price"
+        ></meta>
         <meta name="robots" content="index, follow"></meta>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <meta
+          http-equiv="Content-Type"
+          content="text/html; charset=utf-8"
+        ></meta>
         <meta name="language" content="English"></meta>
         <meta name="revisit-after" content="14 days"></meta>
         <meta name="author" content="https://pufler.dev"></meta>

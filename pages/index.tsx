@@ -203,6 +203,15 @@ const Home = () => {
             />
           </div>
         </div>
+        <div className="mx-4 mb-8 md:mx-0">
+          <a href="https://gravityfinance.io">
+            <img
+              className="m-auto"
+              src="/banner.gif"
+              alt="Gravity Finance Banner"
+            />
+          </a>
+        </div>
       </Layout>
     </div>
   );
