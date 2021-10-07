@@ -142,7 +142,21 @@ const Home = () => {
             </h1>
           </div>
         </div>
-        <div className="mx-4 mb-8 md:mx-0">
+        <div className="max-w-4xl mx-auto mb-16">
+          <a href="https://gravityfinance.io">
+            <img
+              className="hidden m-auto sm:block"
+              src="/banner.gif"
+              alt="Gravity Finance Banner"
+            />
+            <img
+              className="block px-4 m-auto sm:hidden"
+              src="/banner-small.gif"
+              alt="Gravity Finance Banner"
+            />
+          </a>
+        </div>
+        <div className="mx-4 mb-16 md:mx-0">
           <h1 className="mb-4 text-3xl md:text-center text-primaryTextLight dark:text-primaryTextDark">
             Last 25 Blocks received
           </h1>
@@ -202,15 +216,6 @@ const Home = () => {
               }}
             />
           </div>
-        </div>
-        <div className="mx-4 mb-8 md:mx-0">
-          <a href="https://gravityfinance.io">
-            <img
-              className="m-auto"
-              src="/banner.gif"
-              alt="Gravity Finance Banner"
-            />
-          </a>
         </div>
       </Layout>
     </div>

@@ -79,8 +79,8 @@ function Layout({ title, children }: LayoutProps) {
         <meta name="revisit-after" content="14 days"></meta>
         <meta name="author" content="https://pufler.dev"></meta>
       </Head>
-      <header className="px-4 py-4 mb-6 shadow-md md:px-16 bg-secondaryBackgroundLight dark:bg-secondaryBackgroundDark">
-        <div className="flex justify-between mx-auto md:container">
+      <header className="p-4 mb-6 shadow-md bg-secondaryBackgroundLight dark:bg-secondaryBackgroundDark">
+        <div className="flex justify-between max-w-4xl mx-auto">
           <div className="flex items-center">
             <img className="w-8" alt="logo" src="/logo.png"></img>
             <h1 className="ml-2 text-2xl font-bold md:text-3xl text-accentText">
@@ -110,7 +110,7 @@ function Layout({ title, children }: LayoutProps) {
           </div>
         </div>
       </header>
-      <div className="container flex flex-col min-h-screen mx-auto overflow-hidden">
+      <div className="container flex flex-col mx-auto overflow-hidden">
         <main className="flex flex-col flex-1">{children}</main>
       </div>
       <footer className="px-16 py-4 shadow-md bg-secondaryBackgroundLight dark:bg-secondaryBackgroundDark text-secondaryTextLight dark:text-secondaryTextDark">
