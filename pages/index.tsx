@@ -89,7 +89,7 @@ const Home = () => {
                   {gasData.fastest?.toFixed(0)}
                 </h2>
                 <h2 className="text-sm font-bold md:text-md text-secondaryTextLight dark:text-secondaryTextDark">
-                  ${((gasData.fastest * price) / 1e9).toFixed(10)}
+                  ${((gasData.fastest * 21e3 * price) / 1e9).toFixed(10)}
                 </h2>
               </div>
               <div className="relative flex items-center justify-between p-4 overflow-hidden border border-solid md:flex-col rounded-xl border-accentText bg-secondaryTextDark dark:bg-secondaryTextLight">
@@ -108,7 +108,7 @@ const Home = () => {
                   {gasData.fast?.toFixed(0)}
                 </h2>
                 <h2 className="z-10 text-sm font-bold md:text-md text-secondaryTextLight dark:text-secondaryTextDark">
-                  ${((gasData.fast * price) / 1e9).toFixed(10)}
+                  ${((gasData.fast * 21e3 * price) / 1e9).toFixed(10)}
                 </h2>
               </div>
               <div className="flex items-center justify-between p-4 overflow-hidden border border-solid md:flex-col rounded-xl border-secondaryTextLight dark:border-secondaryTextDark bg-secondaryTextDark dark:bg-secondaryTextLight">
@@ -119,7 +119,7 @@ const Home = () => {
                   {gasData.standard?.toFixed(0)}
                 </h2>
                 <h2 className="text-sm font-bold md:text-md text-secondaryTextLight dark:text-secondaryTextDark">
-                  ${((gasData.standard * price) / 1e9).toFixed(10)}
+                  ${((gasData.standard * 21e3 * price) / 1e9).toFixed(10)}
                 </h2>
               </div>
               <div className="flex items-center justify-between p-4 overflow-hidden border border-solid md:flex-col rounded-xl border-secondaryTextLight dark:border-secondaryTextDark bg-secondaryTextDark dark:bg-secondaryTextLight">
@@ -130,7 +130,7 @@ const Home = () => {
                   {gasData.safeLow?.toFixed(0)}
                 </h2>
                 <h2 className="text-sm font-bold md:text-md text-secondaryTextLight dark:text-secondaryTextDark">
-                  ${((gasData.safeLow * price) / 1e9).toFixed(10)}
+                  ${((gasData.safeLow * 21e3 * price) / 1e9).toFixed(10)}
                 </h2>
               </div>
             </div>
