@@ -78,6 +78,7 @@ function Layout({ title, children }: LayoutProps) {
         <meta name="language" content="English"></meta>
         <meta name="revisit-after" content="14 days"></meta>
         <meta name="author" content="https://pufler.dev"></meta>
+        <script async src="https://umami.pufler.dev/script.js" data-website-id="b4b7a77d-7038-49a9-b828-54533e0286c7"></script>
       </Head>
       <header className="p-4 mb-6 shadow-md bg-secondaryBackgroundLight dark:bg-secondaryBackgroundDark">
         <div className="flex justify-between max-w-4xl mx-auto">
